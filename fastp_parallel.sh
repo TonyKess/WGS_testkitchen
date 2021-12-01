@@ -17,9 +17,10 @@ cd $projdir
 #export to make parallel happy
 export fastp
 export projdir
+export set
 
 #run in parallel
-cat $projdir/sets/Lumpfish_set12.txt | \
+cat $projdir/sets/$set | \
   parallel -j 8 \
   '$fastp -i {}_R1.fastq.gz \
   -I {}_R2.fastq.gz \

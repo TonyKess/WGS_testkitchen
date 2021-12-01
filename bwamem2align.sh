@@ -30,7 +30,4 @@ while read ind;
   $genome \
   $ind\_R1.trimmed.fastq.gz  $ind\_R2.trimmed.fastq.gz\
   | samtools sort -o $projdir/align/$ind\.sorted.bam -T $ind -@ 32 -m 3G ;
-  done <  $projdir/sets/Lumpfish_set12.txt
-
-#try moving to aligndir after instead
-#mv $ind\.sorted.bam $alignloc 
+  done <  $projdir/sets/$set
